@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kantin Kampus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= LOGIN ================= -->
+<div id="loginPage" class="login-page">
+    <div class="login-box" id="loginBox">
+        <h1>🍔 Kantin Kampus</h1>
+        <p>Silakan login untuk masuk</p>
+
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <p id="loginError"></p>
+
+        <p class="switch-form">
+            Belum punya akun?
+            <a href="#" onclick="tampilkanRegister(); return false;">Daftar di sini</a>
+        </p>
+    </div>
+
+    <!-- FORM BUAT AKUN -->
+    <div class="login-box" id="registerBox" style="display:none;">
+        <h1>📝 Buat Akun</h1>
+        <p>Daftar sebagai pembeli</p>
+
+        <input type="text" id="regUsername" placeholder="Username">
+        <input type="password" id="regPassword" placeholder="Password (minimal 4 karakter)">
+        <input type="password" id="regPassword2" placeholder="Ulangi password">
+
+        <button onclick="daftar()">Buat Akun</button>
+
+        <p id="registerError"></p>
+
+        <p class="switch-form">
+            Sudah punya akun?
+            <a href="#" onclick="tampilkanLogin(); return false;">Kembali ke login</a>
+        </p>
+    </div>
+</div>
+
+
+<!-- ================= APLIKASI ================= -->
+<div id="app" style="display:none;">
+
+    <header>
+        <h2>🍔 Kantin Kampus</h2>
+
+        <nav>
+            <button data-role="pemilik" onclick="showPage('dashboard')">Dashboard</button>
+            <button data-role="pemilik" onclick="showPage('kategori')">Kategori</button>
+            <button data-role="pemilik" onclick="showPage('produk')">Produk</button>
+            <button data-role="semua" onclick="showPage('transaksi')">Transaksi</button>
+            <button data-role="pemilik" onclick="showPage('riwayat')">Riwayat</button>
+            <button data-role="pemilik" onclick="showPage('laporan')">Laporan</button>
+            <button onclick="logout()">Logout</button>
+        </nav>
+
+        <div class="user-info">
+            Login sebagai: <b id="namaUser"></b>
+            (<span id="roleUser"></span>)
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- ================= DASHBOARD ================= -->
+        <section id="dashboard" class="page">
+            <h1>Dashboard</h1>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Produk</h3>
+                    <p id="totalProduk">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Kategori</h3>
+                    <p id="totalKategori">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Transaksi</h3>
+                    <p id="totalTransaksi">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Pendapatan</h3>
+                    <p id="totalPendapatan">Rp0</p>
+                </div>
+            </div>
+        </section>
