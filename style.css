@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* LOGIN */
+
+.login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background-color: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #aaa;
+    text-align: center;
+}
+
+.login-box h1 {
+    color: #16834b;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #16834b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginError,
+#registerError {
+    color: red;
+}
+
+#registerError.sukses,
+#loginError.sukses {
+    color: #16834b;
+}
+
+.switch-form {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.switch-form a {
+    color: #16834b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: #16834b;
+    color: white;
+    padding: 15px 25px;
+}
+
+header h2 {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav {
+    display: inline-block;
+}
+
+nav button {
+    background-color: white;
+    color: #16834b;
+    border: none;
+    padding: 8px 12px;
+    margin: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* CONTENT */
+
+main {
+    padding: 25px;
+}
+
+.page {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+
+/* CARD */
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #e8f7ef;
+    padding: 20px;
+    width: 220px;
+    border-radius: 10px;
+}
+
+.card p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #16834b;
+}
+
+
+/* INPUT */
+
+input,
+select {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* BUTTON */
+
+button {
+    padding: 9px 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #16834b;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #106638;
+}
